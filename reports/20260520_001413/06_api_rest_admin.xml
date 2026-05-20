@@ -1,0 +1,16 @@
+﻿<empleados>
+    <empleado id="200">
+        <nombre>Jennifer</nombre>
+        <apellido>Whalen</apellido>
+        <email>JWHALEN</email>
+        <salario>4400</salario>
+        <cargo>AD_ASST</cargo>
+      </empleado>
+    <empleado id="201">
+        <nombre>Michael</nombre>
+        <apellido>Hartstein</apellido>
+        <email>MHARTSTE</email>
+        <salario>13000</salario>
+        <cargo>MK_MAN</cargo>
+      </empleado>
+</empleados>
