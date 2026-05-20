@@ -1,0 +1,8 @@
+services:
+  existdb:
+    image: existdb/existdb:latest
+    container_name: existdb-xml-hr
+    ports:
+      - "8081:8080"
+    volumes:
+      - ./data:/exist/import

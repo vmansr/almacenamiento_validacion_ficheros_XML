@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyecto XML HR con eXist-db</title>
+  <link rel="stylesheet" href="/exist/rest/db/proyecto-hr/app/style.css?v=20260519b" />
+</head>
+<body>
+  <h1>Proyecto XML con eXist-db</h1>
+  <p>Consulta de empleados y visualizacion del esquema HR completo.</p>
+  <p class="legend">
+    <strong>Cargar empleados</strong>: muestra la salida XML del endpoint RESTXQ.
+    <strong>Ver esquema HR completo</strong>: muestra resumen, XSD y datos HR.
+  </p>
+
+  <div class="actions">
+    <button id="btnEmpleados">Cargar empleados</button>
+    <button id="btnEsquema">Ver esquema HR completo</button>
+    <button id="btnCopiar">Copiar salida</button>
+    <button id="btnPresentacion">Modo presentacion</button>
+  </div>
+
+  <h2>Salida XML</h2>
+  <div id="schemaView" class="schema-view hidden" />
+  <pre id="salida">Pulsa un botón para consultar.</pre>
+
+  <script src="/exist/rest/db/proyecto-hr/app/app.js?v=20260519c"></script>
+</body>
+</html>

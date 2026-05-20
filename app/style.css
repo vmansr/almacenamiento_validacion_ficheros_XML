@@ -1,0 +1,149 @@
+:root {
+  --ink: #11202c;
+  --paper: #f7f4ee;
+  --accent: #0f766e;
+  --accent-2: #164e63;
+  --panel: #ffffff;
+  --line: #d5d9dd;
+}
+
+body {
+  font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+  background: radial-gradient(circle at 10% 10%, #f1ece3 0%, #f7f4ee 45%, #eef4f6 100%);
+  color: var(--ink);
+  margin: 0;
+  padding: 2rem;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+.legend {
+  background: #fff3d6;
+  border: 1px solid #e8cf90;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  color: #4f3a0e;
+  margin-bottom: 1rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 10px 16px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(15, 118, 110, 0.2);
+}
+
+pre {
+  background: #0f1720;
+  color: #e8edf2;
+  padding: 1rem;
+  border-radius: 10px;
+  overflow: auto;
+  border: 1px solid #203140;
+}
+
+.hidden {
+  display: none;
+}
+
+.schema-view {
+  background: #0f1720;
+  border: 1px solid #2b3c4d;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: #e7edf3;
+}
+
+.schema-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.schema-card {
+  background: #182433;
+  border: 1px solid #35506a;
+  border-radius: 10px;
+  padding: 0.8rem;
+}
+
+.schema-card .label {
+  display: block;
+  font-size: 0.8rem;
+  color: #9fb8ce;
+}
+
+.schema-card .value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #f4f8fc;
+}
+
+details {
+  margin-top: 0.7rem;
+  border: 1px solid #35506a;
+  border-radius: 8px;
+  background: #121d2a;
+}
+
+summary {
+  cursor: pointer;
+  padding: 0.6rem 0.8rem;
+  font-weight: 600;
+  color: #dce9f5;
+}
+
+.schema-xml {
+  white-space: pre-wrap;
+  word-break: break-word;
+  border-top: 1px solid #35506a;
+  padding: 0.8rem;
+  margin: 0;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.88rem;
+  color: #d5e4f2;
+  background: #0b131c;
+}
+
+body.present-mode {
+  background: #05070a;
+  color: #f8fbff;
+  font-size: 1.1rem;
+}
+
+body.present-mode .legend {
+  background: #152030;
+  border-color: #2b4667;
+  color: #dcecff;
+}
+
+body.present-mode button {
+  font-size: 1rem;
+  padding: 12px 18px;
+}
+
+body.present-mode pre,
+body.present-mode .schema-view,
+body.present-mode details,
+body.present-mode .schema-card {
+  border-color: #4e7db0;
+}

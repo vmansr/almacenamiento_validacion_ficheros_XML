@@ -1,0 +1,11 @@
+﻿<exist:result xmlns:exist="http://exist.sourceforge.net/NS/exist" exist:hits="1" exist:start="1" exist:count="1" exist:compilation-time="10" exist:execution-time="10">
+    <empleados-filtrados>
+        <empleado>
+            <departamento>Marketing</departamento>
+            <id>201</id>
+            <nombre>Michael</nombre>
+            <apellido>Hartstein</apellido>
+            <salario>13000</salario>
+        </empleado>
+    </empleados-filtrados>
+</exist:result>

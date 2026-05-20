@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hr>
+  <regiones>
+    <region id="1" nombre="Europe"/>
+  </regiones>
+  <paises>
+    <pais id="UK" nombre="United Kingdom" region-id="1"/>
+  </paises>
+  <ubicaciones>
+    <ubicacion id="1700" direccion="2004 Charade Rd" ciudad="Seattle" pais-id="UK"/>
+  </ubicaciones>
+  <departamentos>
+    <departamento id="20" nombre="Marketing" ubicacion-id="1700">
+      <empleado id="201">
+        <nombre>Michael</nombre>
+        <apellido>Hartstein</apellido>
+        <email>MHARTSTE</email>
+        <salario>cuatro mil</salario>
+        <cargo>MK_MAN</cargo>
+      </empleado>
+    </departamento>
+  </departamentos>
+</hr>

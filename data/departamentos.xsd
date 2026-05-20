@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="hr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="regiones" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="region" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="id" type="xs:integer" use="required"/>
+                  <xs:attribute name="nombre" type="xs:string" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="paises" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="pais" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="id" type="xs:string" use="required"/>
+                  <xs:attribute name="nombre" type="xs:string" use="required"/>
+                  <xs:attribute name="region-id" type="xs:integer" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="ubicaciones" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ubicacion" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="id" type="xs:integer" use="required"/>
+                  <xs:attribute name="direccion" type="xs:string" use="required"/>
+                  <xs:attribute name="ciudad" type="xs:string" use="required"/>
+                  <xs:attribute name="pais-id" type="xs:string" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="departamentos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="departamento" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="empleado" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="nombre" type="xs:string"/>
+                          <xs:element name="apellido" type="xs:string"/>
+                          <xs:element name="email" type="xs:string"/>
+                          <xs:element name="salario" type="xs:decimal"/>
+                          <xs:element name="cargo" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:integer" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:integer" use="required"/>
+                  <xs:attribute name="nombre" type="xs:string" use="required"/>
+                  <xs:attribute name="ubicacion-id" type="xs:integer" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

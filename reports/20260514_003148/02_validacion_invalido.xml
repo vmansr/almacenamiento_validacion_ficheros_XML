@@ -1,0 +1,8 @@
+﻿<exist:result xmlns:exist="http://exist.sourceforge.net/NS/exist" exist:hits="1" exist:start="1" exist:count="1" exist:compilation-time="3" exist:execution-time="3">
+    <report>
+        <status>invalid</status>
+        <duration unit="msec">26</duration>
+        <message level="Error" line="7" column="36">cvc-datatype-valid.1.2.1: 'cuatro mil' is not a valid value for 'decimal'.</message>
+        <message level="Error" line="7" column="36">cvc-type.3.1.3: The value 'cuatro mil' of element 'salario' is not valid.</message>
+    </report>
+</exist:result>

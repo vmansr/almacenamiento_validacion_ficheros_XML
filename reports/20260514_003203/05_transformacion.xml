@@ -1,0 +1,42 @@
+﻿<exist:result xmlns:exist="http://exist.sourceforge.net/NS/exist" exist:hits="1" exist:start="1" exist:count="1" exist:compilation-time="0" exist:execution-time="0">
+    <html>
+        <head>
+            <title>Departamentos y empleados</title>
+        </head>
+        <body>
+            <h1>Departamentos y empleados del esquema HR</h1>
+            <table border="1">
+                <tr>
+                    <th>ID Departamento</th>
+                    <th>Departamento</th>
+                    <th>ID Empleado</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Salario</th>
+                    <th>Cargo</th>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Administration</td>
+                    <td>200</td>
+                    <td>Jennifer</td>
+                    <td>Whalen</td>
+                    <td>JWHALEN</td>
+                    <td>4400</td>
+                    <td>AD_ASST</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Marketing</td>
+                    <td>201</td>
+                    <td>Michael</td>
+                    <td>Hartstein</td>
+                    <td>MHARTSTE</td>
+                    <td>13000</td>
+                    <td>MK_MAN</td>
+                </tr>
+            </table>
+        </body>
+    </html>
+</exist:result>
