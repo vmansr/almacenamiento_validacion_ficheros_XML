@@ -1,16 +1,51 @@
 # Proyecto XML HR con eXist-db
 
-Proyecto de gestion de documentos XML usando eXist-db como base de datos XML nativa.
+Implementacion de un flujo completo de gestion de documentos XML sobre eXist-db como base de datos XML nativa. Incluye modelado XML con esquema HR, validacion XSD, consultas XPath y XQuery, transformacion XSLT, endpoint RESTXQ e interfaz web.
 
-## Estructura
-- data
-- queries
-- config
-- app
-- reports
-- scripts
+## Requisitos previos
+Antes de ejecutar el proyecto, asegurate de tener instalado:
 
-## Levantar eXist-db
+| Herramienta | Version recomendada | Descarga |
+|---|---|---|
+| Docker Desktop | 4.x o superior | https://www.docker.com/products/docker-desktop |
+| Git | cualquier version reciente | https://git-scm.com |
+| PowerShell | 5.1 o superior (incluido en Windows 10/11) | preinstalado |
+
+> No se requiere instalar eXist-db manualmente. El contenedor Docker lo gestiona automaticamente.
+
+## Estructura del proyecto
+```
+proyecto-eXistdb-xml-hr/
+├── data/           # Documentos XML, XSD y XSLT
+├── queries/        # Consultas XQuery (validacion, XPath, FLWOR, transformacion, RESTXQ)
+├── config/         # Configuracion de colecciones eXist-db (collection.xconf)
+├── app/            # Frontend web (XHTML, CSS, JavaScript)
+├── scripts/        # Scripts de despliegue y generacion de reportes
+├── reports/        # Evidencias XML de consultas ejecutadas
+├── docker-compose.yml
+└── inicio-rapido.ps1
+```
+
+## Ejecucion rapida (opcion recomendada)
+
+```powershell
+# 1. Clona el repositorio
+git clone https://github.com/vmansr/almacenamiento_validacion_ficheros_XML.git
+cd almacenamiento_validacion_ficheros_XML
+
+# 2. Abre Docker Desktop y espera que este corriendo
+
+# 3. Ejecuta el script de inicio (levanta Docker + despliega todo + abre el navegador)
+powershell -ExecutionPolicy Bypass -File .\inicio-rapido.ps1
+```
+
+El script espera automaticamente a que eXist-db este listo antes de desplegar. Al finalizar, el navegador se abre directamente en la interfaz del proyecto.
+
+**URL de la aplicacion:** http://localhost:8081/exist/rest/db/proyecto-hr/app/index.xhtml
+
+---
+
+## Levantar eXist-db (manual)
 ```powershell
 docker compose up -d
 ```
