@@ -44,8 +44,8 @@ function MkCol {
   $query = @"
 xquery version "3.1";
 import module namespace xmldb="http://exist-db.org/xquery/xmldb";
-let $result := xmldb:create-collection(xs:anyURI("$parentPath"), "$collectionName")
-return <result>{$result}</result>
+let `$result := xmldb:create-collection(xs:anyURI("$parentPath"), "$collectionName")
+return <result>{`$result}</result>
 "@
 
   $body = Invoke-Curl -Args @("-s", "-u", "${User}:${Password}", "$BaseUrl/db?_query=$(Encode-Query $query)") -ReturnBody
