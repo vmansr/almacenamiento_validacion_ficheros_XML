@@ -135,7 +135,20 @@ docker compose stop
 - Solucion aplicada: se publico app/index.xhtml con Content-Type application/xhtml+xml y referencias absolutas a style.css y app.js.
 - URL final recomendada: http://localhost:8081/exist/rest/db/proyecto-hr/app/index.xhtml?v=20260519c
 
+## Credenciales de acceso
+La configuracion por defecto de eXist-db en este proyecto es:
+```
+Usuario: admin
+Contraseña: (vacía - solo presiona ENTER)
+```
+
+Para acceder a la consola de administracion:
+1. Abre http://localhost:8081/exist/apps/eXist-db/admin
+2. Escribe: `admin`
+3. Contraseña: presiona ENTER sin escribir nada
+
 ## Notas
-- En la imagen actual de eXist-db el usuario admin inicia sin password.
-- Si cambiaste el password de admin, ajusta variables en el script.
-- El endpoint RESTXQ responde 401 sin autenticacion y 200 con admin en la configuracion actual.
+- En la imagen actual de eXist-db el usuario admin inicia **sin password**.
+- Si cambiaste el password de admin, ajusta la variable `$Password` en los scripts (`deploy-exist.ps1`, `generar-reporte-pruebas.ps1`).
+- El endpoint RESTXQ responde 401 sin autenticacion y 200 con credenciales admin en la configuracion actual.
+- Los scripts usan autenticacion HTTP Basic con usuario admin y contraseña vacía por defecto.
