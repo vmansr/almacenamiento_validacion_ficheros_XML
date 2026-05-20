@@ -68,7 +68,7 @@ Ejecutar:
 powershell -ExecutionPolicy Bypass -File .\scripts\deploy-exist.ps1
 ```
 
-## Inicio rapido (dia siguiente / revision docente)
+## Inicio rapido
 Para levantar todo en un solo paso (contenedor + espera de eXist-db + despliegue + apertura del frontend):
 
 ```powershell
