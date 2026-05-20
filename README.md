@@ -96,7 +96,7 @@ powershell -ExecutionPolicy Bypass -File .\inicio-rapido.ps1
 ```
 
 3. Abrir o verificar frontend en:
-- http://localhost:8081/exist/rest/db/proyecto-hr/app/index.xhtml?v=20260514b
+- http://localhost:8081/exist/rest/db/proyecto-hr/app/index.xhtml?v=20260519c
 
 ### Opcion con reporte automatico
 ```powershell
@@ -133,7 +133,7 @@ docker compose stop
 - La interfaz del navegador debe abrirse desde index.xhtml y no desde index.html.
 - Motivo: eXist-db almaceno index.html como recurso binario con MIME text/plain, por lo que el navegador mostraba el codigo fuente en lugar de renderizar la pagina.
 - Solucion aplicada: se publico app/index.xhtml con Content-Type application/xhtml+xml y referencias absolutas a style.css y app.js.
-- URL final recomendada: http://localhost:8081/exist/rest/db/proyecto-hr/app/index.xhtml?v=20260514b
+- URL final recomendada: http://localhost:8081/exist/rest/db/proyecto-hr/app/index.xhtml?v=20260519c
 
 ## Notas
 - En la imagen actual de eXist-db el usuario admin inicia sin password.

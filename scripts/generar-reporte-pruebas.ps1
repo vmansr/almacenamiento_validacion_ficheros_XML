@@ -120,7 +120,7 @@ foreach ($t in $tests) {
       }
     }
     else {
-      $frontendUrl = "$BaseUrl/db/proyecto-hr/app/index.xhtml?v=20260514b"
+      $frontendUrl = "$BaseUrl/db/proyecto-hr/app/index.xhtml?v=20260519c"
       $headers = Invoke-CurlBody -Args @("-I", "-s", "-u", "${User}:${Password}", $frontendUrl)
       $rawPath = Join-Path $reportDir ($t.Name + ".txt")
       Set-Content -Path $rawPath -Value $headers -Encoding UTF8
@@ -167,7 +167,7 @@ $academic += "- Fecha de ejecucion: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
 $academic += "- Entorno: eXist-db en contenedor Docker"
 $academic += "- Endpoint base REST: $BaseUrl"
 $academic += "- Endpoint base RESTXQ: $RestXqUrl"
-$academic += "- Frontend final: http://localhost:8081/exist/rest/db/proyecto-hr/app/index.xhtml?v=20260514b"
+$academic += "- Frontend final: http://localhost:8081/exist/rest/db/proyecto-hr/app/index.xhtml?v=20260519c"
 $academic += ""
 $academic += "## Objetivo"
 $academic += "Validar que el proyecto XML/XQuery funciona de forma integral en eXist-db, cubriendo almacenamiento XML, validacion XSD, consultas XPath/XQuery, transformacion XSLT, publicacion RESTXQ y visualizacion frontend." 

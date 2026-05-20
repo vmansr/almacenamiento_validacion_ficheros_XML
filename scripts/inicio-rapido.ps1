@@ -57,7 +57,7 @@ else {
   Write-Output "[3/4] Reporte omitido (use -GenerarReporte para incluirlo)."
 }
 
-$frontendUrl = "http://localhost:8081/exist/rest/db/proyecto-hr/app/index.xhtml?v=20260514b"
+$frontendUrl = "http://localhost:8081/exist/rest/db/proyecto-hr/app/index.xhtml?v=20260519c"
 Write-Output "[4/4] Abriendo frontend: $frontendUrl"
 Start-Process $frontendUrl
 
