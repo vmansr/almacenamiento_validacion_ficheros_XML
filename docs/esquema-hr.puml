@@ -1,0 +1,58 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class HR
+class Regiones
+class Paises
+class Ubicaciones
+class Departamentos
+
+class Region {
+  +id: Integer
+  +nombre: String
+}
+
+class Pais {
+  +id: String
+  +nombre: String
+  +regionId: Integer
+}
+
+class Ubicacion {
+  +id: Integer
+  +direccion: String
+  +ciudad: String
+  +paisId: String
+}
+
+class Departamento {
+  +id: Integer
+  +nombre: String
+  +ubicacionId: Integer
+}
+
+class Empleado {
+  +id: Integer
+  +nombre: String
+  +apellido: String
+  +email: String
+  +salario: Decimal
+  +cargo: String
+}
+
+HR "1" -- "0..1" Regiones
+HR "1" -- "0..1" Paises
+HR "1" -- "0..1" Ubicaciones
+HR "1" -- "1" Departamentos
+
+Regiones "1" -- "0..*" Region
+Paises "1" -- "0..*" Pais
+Ubicaciones "1" -- "0..*" Ubicacion
+Departamentos "1" -- "1..*" Departamento
+Departamento "1" -- "1..*" Empleado
+
+Region "1" -- "0..*" Pais : FK region-id -> id
+Pais "1" -- "0..*" Ubicacion : FK pais-id -> id
+Ubicacion "1" -- "0..*" Departamento : FK ubicacion-id -> id
+
+@enduml
