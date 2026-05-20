@@ -1,8 +1,8 @@
-﻿# Informe academico de pruebas
+# Informe academico de pruebas
 
 ## Datos generales
 - Asignatura: Base de Datos Avanzadas
-- Proyecto: proyecto-eXistdb-xml-hr
+- Proyecto: victor_sanchez_bd_avanzadas
 - Fecha de ejecucion: 2026-05-14 00:36:07
 - Entorno: eXist-db en contenedor Docker
 - Endpoint base REST: http://localhost:8081/exist/rest

@@ -2,7 +2,7 @@
 
 ## 1. Datos generales
 - Asignatura: Base de Datos Avanzadas
-- Proyecto: proyecto-eXistdb-xml-hr
+- Proyecto: victor_sanchez_bd_avanzadas
 - Fecha de elaboracion: 2026-05-14
 - Base de datos XML utilizada: eXist-db
 - Entorno de ejecucion: Docker sobre Windows

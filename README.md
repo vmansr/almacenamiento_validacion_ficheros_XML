@@ -15,7 +15,7 @@ Antes de ejecutar el proyecto, asegurate de tener instalado:
 
 ## Estructura del proyecto
 ```
-proyecto-eXistdb-xml-hr/
+victor_sanchez_bd_avanzadas/
 ├── data/           # Documentos XML, XSD y XSLT
 ├── queries/        # Consultas XQuery (validacion, XPath, FLWOR, transformacion, RESTXQ)
 ├── config/         # Configuracion de colecciones eXist-db (collection.xconf)
@@ -30,8 +30,8 @@ proyecto-eXistdb-xml-hr/
 
 ```powershell
 # 1. Clona el repositorio
-git clone https://github.com/vmansr/almacenamiento_validacion_ficheros_XML.git
-cd almacenamiento_validacion_ficheros_XML
+git clone https://github.com/vmansr/victor_sanchez_bd_avanzadas.git
+cd victor_sanchez_bd_avanzadas
 
 # 2. Abre Docker Desktop y espera que este corriendo
 

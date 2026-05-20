@@ -1,4 +1,4 @@
-﻿# Reporte de pruebas eXistDB
+# Reporte de pruebas eXistDB
 
 - Fecha: 2026-05-14 00:32:04
 - Base URL: http://localhost:8081/exist/rest
