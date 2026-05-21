@@ -6,6 +6,10 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
+$RepoRoot = Split-Path -Parent $PSScriptRoot
+
+Push-Location $RepoRoot
+try {
 
 function Invoke-Curl {
   param(
@@ -205,3 +209,7 @@ if ($frontendHeaders -match "Content-Type: application/xhtml\+xml") { Write-Outp
 
 Write-Output ""
 Write-Output "Despliegue finalizado."
+}
+finally {
+  Pop-Location
+}

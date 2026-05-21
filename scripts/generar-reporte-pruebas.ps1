@@ -6,6 +6,10 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
+$RepoRoot = Split-Path -Parent $PSScriptRoot
+
+Push-Location $RepoRoot
+try {
 
 function Invoke-CurlBody {
   param([Parameter(Mandatory = $true)][string[]]$Args)
@@ -219,3 +223,7 @@ Write-Output ""
 Write-Output "Reporte generado: $reportPath"
 Write-Output "Informe academico generado: $academicPath"
 Write-Output "Archivos de evidencia: $reportDir"
+}
+finally {
+  Pop-Location
+}

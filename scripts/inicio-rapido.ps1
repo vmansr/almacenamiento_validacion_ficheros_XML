@@ -3,6 +3,10 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
+$RepoRoot = Split-Path -Parent $PSScriptRoot
+
+Push-Location $RepoRoot
+try {
 
 $null = Get-Command docker -ErrorAction SilentlyContinue
 if (-not $?) {
@@ -41,14 +45,14 @@ if (-not $ready) {
 Write-Output "eXist-db listo."
 
 Write-Output "[2/4] Ejecutando despliegue del proyecto..."
-powershell -ExecutionPolicy Bypass -File .\scripts\deploy-exist.ps1
+powershell -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "deploy-exist.ps1")
 if ($LASTEXITCODE -ne 0) {
   throw "Fallo el script deploy-exist.ps1"
 }
 
 if ($GenerarReporte) {
   Write-Output "[3/4] Generando reporte de pruebas..."
-  powershell -ExecutionPolicy Bypass -File .\scripts\generar-reporte-pruebas.ps1
+  powershell -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "generar-reporte-pruebas.ps1")
   if ($LASTEXITCODE -ne 0) {
     throw "Fallo el script generar-reporte-pruebas.ps1"
   }
@@ -64,3 +68,7 @@ Start-Process $frontendUrl
 Write-Output ""
 Write-Output "Inicio rapido completado."
 Write-Output "Si necesitas apagar al terminar: docker compose stop"
+}
+finally {
+  Pop-Location
+}
